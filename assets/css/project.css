@@ -1,0 +1,196 @@
+#project {
+  background-color: var(--second-primary-color);
+}
+#project p {
+  display: inline;
+}
+
+.row.project__card {
+  padding: 32px 0;
+}
+.project-card__detail {
+  background-color: var(--first-primary-color);
+  border-radius: 15px 0px 0px 15px;
+  height: 100%;
+  padding-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: center;
+}
+.project-card__detail > div {
+  flex-basis: 100%;
+}
+.row.project__card + .row.project__card {
+  /* border-top: 3px dashed #dfd7cc; */
+}
+.project__card-title {
+  font-size: 4rem;
+  text-align: center;
+  line-height: normal;
+  padding: 40px 0 35px 0;
+  text-transform: uppercase;
+}
+.project-card__name-detail {
+  font-size: 2.4rem;
+  line-height: normal;
+  padding-top: 20px;
+}
+.project-card__detail > div + div {
+  margin-top: 15px;
+}
+.project__card-description,
+.project__card-techlonogy {
+  font-size: 1.5rem;
+}
+
+/* =================================== */
+/* Tag */
+.tech-tag-container {
+  display: flex;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.tech-tag {
+  height: 2rem;
+  display: flex;
+  border-radius: 3px;
+  align-items: center;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.tech-tag div {
+  background-color: #eaeaea;
+}
+
+.tag__icon {
+  width: 20px;
+  height: 1.4rem;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px 0 0 4px;
+  padding: 1rem 0;
+}
+
+.tag__name {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.086rem;
+  text-align: center;
+  border-radius: 0 4px 4px 0;
+  padding: 0.3rem 0.4rem;
+}
+
+/* HTML */
+.tag--html .tag__icon {
+  background-image: url(../images/html-css-svgrepo.svg);
+}
+
+.tech-tag.tag--html .tag__name {
+  color: #e04b24;
+}
+/* css */
+.tag--css .tag__icon {
+  background-image: url(../images/css3-logo-svgrepo-com.svg);
+}
+.tech-tag.tag--css .tag__name {
+  color: #0d72b8;
+}
+/* Js */
+.tag--javascript .tag__icon {
+  background-image: url(../images/js-svgrepo-com.svg);
+}
+.tech-tag.tag--javascript .tag__name {
+  color: #3d3e3e;
+}
+/* ReactJS */
+.tag--reactjs .tag__icon {
+  background-image: url(../images/react-svgrepo-com.svg);
+}
+.tech-tag.tag--reactjs .tag__name {
+  color: #52c1df;
+}
+
+/* NodeJs */
+.tag--nodejs .tag__icon {
+  background-image: url(../images/nodejs-svgrepo-com.svg);
+}
+
+.tech-tag.tag--nodejs .tag__name {
+  color: #4a903d;
+}
+
+/* Image Slider */
+
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 400px; /* Chiều cao cố định */
+  min-height: 300px; /* Chiều cao tối thiểu */
+  max-height: 600px; /* Chiều cao tối đa */
+  background-color: #f7f6f2;
+  border-radius: 0px 15px 15px 0px;
+}
+.slider,
+.slide,
+.slide img {
+  height: 100%;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  position: relative; /* Đặt relative để các slide con có thể dùng absolute */
+  position: absolute; /* Đảm bảo các slide nằm chồng lên nhau */
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0s;
+  /* order: -1; Là một cách hay*/
+}
+
+.slide img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+.dots {
+  text-align: center;
+  position: relative;
+  margin-top: -30px;
+}
+
+.dot {
+  opacity: 86%;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot:hover {
+  background-color: #717171;
+  opacity: 100%;
+}
+.dot.active {
+  background-color: #717171;
+}

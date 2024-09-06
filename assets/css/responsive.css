@@ -1,0 +1,72 @@
+/* responsive */
+
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+  .nav-list__item {
+    display: none;
+  }
+  .info__name-lagre,
+  .info__job {
+    font-size: 3.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .nav__list {
+    justify-content: center;
+  }
+  .nav-list__item-local {
+    display: none;
+  }
+  .about-me__image {
+    height: 600px;
+  }
+  /* .about-me .info__name-lagre {
+  } */
+  .home > div + div {
+    padding-top: 40px;
+  }
+  .about-me__image::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0.2rem;
+    top: -24px;
+    left: 0;
+    right: 0;
+    background-color: rgb(61, 61, 61);
+  }
+}
+@media (min-width: 1113px) {
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .about-me__image {
+    height: 400px;
+  }
+  :root {
+    --process-circle-size: 100px;
+  }
+
+  /* Nav bar */
+  .nav__list {
+    /* max-width: ; */
+  }
+  .nav-list__item,
+  .nav-list__item-logo {
+    flex-shrink: 1;
+  }
+  .nav-list__item-local {
+    flex-shrink: 3;
+  }
+  .about-me__image {
+    animation-duration: 2.5s;
+  }
+  .footer__copyright {
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+}

@@ -1,0 +1,50 @@
+#about {
+  margin-top: var(--header-height);
+  background-color: var(--second-primary-color);
+}
+.heading-section .about {
+  display: flex;
+}
+.heading-section {
+  display: inline-block;
+  font-size: 2.2rem;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin: 0 0 50px 0;
+  background-color: #ededeb;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.about__item {
+  justify-content: center;
+  align-items: center;
+}
+
+.about__info {
+  line-height: normal;
+}
+.about__image {
+  background-image: url(../images/about-me.jpg);
+  height: 670px;
+  background-size: cover; /* Để hình ảnh phủ kín thẻ div */
+  background-position: center; /* Căn giữa hình ảnh trong thẻ div */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  animation: fadeInLeft 3.5s linear;
+  border-radius: 5px;
+  border: 5px solid #e4e4e4;
+}
+
+.about__info {
+  color: #333;
+  padding-left: 20px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.about-info__detail {
+}
+.about-info__quick {
+  border-left: 3px solid #333;
+  padding-left: 10px;
+}

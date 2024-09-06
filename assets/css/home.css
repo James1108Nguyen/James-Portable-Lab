@@ -1,0 +1,137 @@
+.home {
+  align-items: start;
+}
+
+#home {
+  margin-top: var(--header-height);
+  background-color: var(--first-primary-color);
+}
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home__item {
+  justify-content: center;
+  align-items: center;
+}
+
+.home__info {
+  line-height: normal;
+}
+.home__image {
+  background-image: url(../images/isometric-laptop-with-web-design-application.gif);
+  height: 500px;
+  background-size: cover; /* Để hình ảnh phủ kín thẻ div */
+  background-position: center; /* Căn giữa hình ảnh trong thẻ div */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  animation: fadeInLeft 3.5s linear;
+}
+
+.home__info > .row > .col + .col {
+  margin-top: 10px;
+}
+
+.info__h1,
+.info__name,
+.info__name-small,
+.info__name-lagre,
+.info__job,
+.info__detail,
+.info__contact,
+.info__item-btn {
+  animation-name: fadeInLeft;
+}
+
+.info__h1 {
+  font-size: 8rem;
+  margin-left: -6px;
+  animation-duration: 0.5s;
+}
+.info__name {
+  display: flex;
+  align-items: baseline;
+  animation-duration: 1s;
+}
+.info__name-small {
+  font-size: 2.5rem;
+}
+.info__name-lagre {
+  margin-left: 5px;
+  color: #1f8bab;
+}
+.info__name-lagre,
+.info__job {
+  font-size: 3.5rem;
+}
+.info__job {
+  animation-duration: 1.5s;
+}
+.info__detail {
+  font-size: 1.8rem;
+  animation-duration: 2s;
+  text-align: justify;
+}
+.info__detail > p {
+  margin: 10px 0;
+}
+.info__contact {
+  font-size: 1.4rem;
+  padding: 5px 8px;
+  border-left: 3px solid #333;
+  animation-duration: 2.5s;
+}
+
+.info__contact-icon {
+  height: 1.4rem;
+}
+.info__contact-address,
+.info__contact-phone,
+.info__contact-email {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 2px 0;
+}
+.info__item-btn {
+  display: inline-block;
+  animation-duration: 2.8s;
+  margin: 18px 0;
+}
+
+.info__item-btn + .info__item-btn {
+  margin-left: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 36px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.btn--black {
+  background-color: #000;
+  color: #fff;
+}
+.btn--black:hover {
+  background-color: #353535;
+}
+
+.btn--yellow {
+  background-color: #ffca27;
+  color: #3e3e3e;
+}
+.btn--yellow:hover {
+  background-color: #ffd125;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #000;
+}
+.btn--white:hover {
+  background-color: #e4e4e4;
+}

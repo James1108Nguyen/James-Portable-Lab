@@ -1,0 +1,214 @@
+:root {
+  --first-primary-color: #fff;
+  --second-primary-color: #000000;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.nav {
+  display: block;
+  width: 100%;
+  height: var(--header-height);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding-left: 0;
+}
+
+.nav-list__item,
+.nav-list__item-logo {
+  flex: 0 0 10%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+.nav-list__item-logo {
+  padding: 14px 0;
+}
+.nav-list__item + .nav-list__item {
+  margin-left: 10px;
+}
+
+.nav-list__item a {
+  margin: auto;
+  line-height: var(--header-height);
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-list__item-local {
+  flex: 0 0 30%;
+  height: 100%;
+}
+.local-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: end;
+  height: 100%;
+}
+
+.local-info__location {
+  color: #666;
+  font-size: 1.3rem; /* Kích thước nhỏ hơn để hiển thị địa điểm */
+}
+
+.local-info__time,
+.local-info__weather {
+  font-weight: bold;
+  color: #484848;
+  letter-spacing: 0.5px;
+}
+.local-info__time {
+  font-size: 1.5rem; /* Kích thước lớn hơn để hiển thị thời gian */
+}
+.local-info__weather {
+  font-size: 1.3rem;
+}
+.local-info__weather {
+  display: flex;
+}
+.local-info__weather-icon {
+  margin-right: 10px;
+}
+.local-info__weather-description {
+  color: #ababab;
+}
+
+/* Content */
+.content {
+  background-color: var(--second-primary-color);
+  padding-bottom: 100vh;
+
+  /* background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f6eacb 100%); */
+  margin-top: var(--header-height);
+}
+.home,
+.about,
+.skill,
+.project {
+  padding: 50px 0;
+}
+
+.section-1.about-me {
+  align-items: start;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+}
+
+.about-me__item {
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me__info {
+  line-height: normal;
+}
+.about-me__image {
+  background-image: url(../images/about-me.jpg);
+  height: 400px;
+  background-size: cover; /* Để hình ảnh phủ kín thẻ div */
+  background-position: center; /* Căn giữa hình ảnh trong thẻ div */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  border-radius: 20px; /* Tạo góc bo tròn, tùy chọn */
+  border: 10px solid #c7c7b2;
+  animation: fadeInLeft 3.5s linear;
+}
+
+.about-me__info > .row > .col + .col {
+  margin-top: 10px;
+}
+
+.info__h1,
+.info__name,
+.info__name-small,
+.info__name-lagre,
+.info__job,
+.info__detail,
+.info__contact,
+.info__item-btn {
+  animation-name: fadeInLeft;
+}
+
+.info__h1 {
+  font-size: 8rem;
+  margin-left: -6px;
+  animation-duration: 0.5s;
+}
+.info__name {
+  display: flex;
+  align-items: baseline;
+  animation-duration: 1s;
+}
+.info__name-small {
+  font-size: 2.5rem;
+}
+.info__name-lagre {
+  margin-left: 5px;
+  color: #1f8bab;
+}
+.info__name-lagre,
+.info__job {
+  font-size: 3.5rem;
+}
+.info__job {
+  animation-duration: 1.5s;
+}
+.info__detail {
+  font-size: 1.8rem;
+  animation-duration: 2s;
+  text-align: justify;
+}
+.info__detail > p {
+  margin: 10px 0;
+}
+.info__contact {
+  font-size: 1.4rem;
+  padding: 5px 8px;
+  border-left: 3px solid #333;
+  animation-duration: 2.5s;
+}
+
+.info__contact-icon {
+  height: 1.4rem;
+}
+.info__contact-address,
+.info__contact-phone,
+.info__contact-email {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 2px 0;
+}
+.info__item-btn {
+  animation-duration: 2.8s;
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 36px;
+  color: #ffffff;
+  background-color: #1f8bab;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* ======================= */
