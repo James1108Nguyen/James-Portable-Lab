@@ -16,6 +16,11 @@
   .nav__list {
     justify-content: center;
   }
+  .nav-list__item-logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .nav-list__item-local {
     display: none;
   }
