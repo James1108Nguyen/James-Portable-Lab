@@ -7,8 +7,9 @@
   z-index: 999;
 }
 .header.blur {
-  backdrop-filter: blur(5px); /* Áp dụng hiệu ứng mờ */
-  background-color: rgba(255, 255, 255, 0.6); /* Nền mờ hơn */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -34,6 +35,7 @@
   height: 100%;
   display: flex;
   text-align: center;
+  align-items: center;
 }
 .nav-list__item-logo {
   position: absolute;
