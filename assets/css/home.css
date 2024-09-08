@@ -3,12 +3,24 @@
 }
 
 #home {
-  margin-top: var(--header-height);
-  background-color: var(--first-primary-color);
+  padding-top: var(--header-height);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/me-cafe.JPG);
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+  transition: height 0.2s ease; /* Chuyển đổi mượt mà khi thay đổi chiều cao */
+}
+#home .grid.wide {
+  opacity: 1; /* Độ mờ ban đầu là 1 (hoàn toàn rõ ràng) */
 }
 .home {
   display: flex;
   align-items: center;
+}
+#home .grid.wide {
+  height: 100%;
+  display: flex;
 }
 
 .home__item {
@@ -18,10 +30,11 @@
 
 .home__info {
   line-height: normal;
+  color: var(--color-secondary);
 }
 .home__image {
   background-image: url(../images/isometric-laptop-with-web-design-application.gif);
-  height: 500px;
+  height: 550px;
   background-size: cover; /* Để hình ảnh phủ kín thẻ div */
   background-position: center; /* Căn giữa hình ảnh trong thẻ div */
   background-repeat: no-repeat; /* Không lặp lại hình ảnh */

@@ -1,9 +1,3 @@
-.skill__heading {
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-  color: #333;
-  text-align: center;
-}
 .skill__container {
   display: flex;
   justify-content: space-between;
@@ -16,7 +10,7 @@
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: var(--first-primary-color);
+  background-color: var(--color-primary);
   width: 8rem;
   height: 8rem;
   border-radius: 4rem;

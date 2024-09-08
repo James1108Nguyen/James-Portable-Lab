@@ -46,28 +46,25 @@
   <body>
     <div></div>
     <!-- Header -->
-    <div class="header">
+    <div id="header">
       <div class="grid wide">
         <div class="nav">
           <ul class="nav__list">
             <li class="nav-list__item-logo">
               <img src="./assets/images/logo.png" alt="James's Portable Lab" />
             </li>
-            <li class="nav-list__item"><a href="#">About me</a></li>
+            <li class="nav-list__item"><a href="#home">Home</a></li>
+            <li class="nav-list__item"><a href="#about">About me</a></li>
 
-            <li class="nav-list__item"><a href="#">Project</a></li>
+            <li class="nav-list__item"><a href="#project">Project</a></li>
 
-            <li class="nav-list__item"><a href="#skills">Skills</a></li>
-
-            <li class="nav-list__item"><a href="#">Education</a></li>
+            <li class="nav-list__item"><a href="#skill">Skills</a></li>
 
             <li class="nav-list__item"><a href="#">Contact</a></li>
 
             <li class="nav-list__item-local">
               <div class="local-info">
-                <div class="local-info__location">
-                  Ho Chi Minh City, Vietnam
-                </div>
+                <div class="local-info__location">HCM City, Vietnam</div>
                 <div class="local-info__time" id="time">00:00:00 -M</div>
                 <div class="local-info__weather">
                   <img
@@ -90,7 +87,7 @@
     <div id="home">
       <div class="grid wide">
         <div class="row home">
-          <div class="col l-7 m-6 c-12">
+          <div class="col l-12 m-12 c-12">
             <div class="row home__item">
               <div class="col l-12 m-12 c-10">
                 <div class="row home__info">
@@ -148,13 +145,13 @@
               </div>
             </div>
           </div>
-          <div class="col l-5 m-6 c-12">
+          <!-- <div class="col l-5 m-6 c-12">
             <div class="row home__item">
               <div class="col l-12 m-12 c-11">
                 <div class="home__image"></div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -165,14 +162,14 @@
         <div class="row about">
           <div class="col l-12 m-12 c-12">
             <div class="row about-detail">
-              <div class="col l-6 m-6 c-12">
+              <div class="col l-3 m-3 c-12">
                 <div class="about-detail__img"></div>
               </div>
-              <div class="col l-6 m-6 c-12">
+              <div class="col l-9 m-9 c-12">
                 <div class="primary-heading">About me</div>
                 <div class="about-detail__content">
                   I am a front-end web developer with the goal of becoming a
-                  full-stack developer and beyond. I am currently a senior
+                  full-stack developer and beyond. I am currently a graduating
                   student majoring in Software Engineering at the University of
                   Information Technology (UIT).
                   <br />
@@ -200,7 +197,7 @@
               </div>
             </div>
             <div class="row about-quick">
-              <div class="col l-6 m-6 c-12">
+              <div class="col l-9 m-9 c-12">
                 <div class="about-quick__content">
                   However, my current weakness is that I have limited experience
                   with real-world projects in a professional environment,
@@ -214,19 +211,33 @@
                   <div class="secondary-heading">
                     A few quick facts about me:
                   </div>
-                  Graduating student majoring in Software Engineering at UIT.
-                  <br />
-                  Aspiring to become a web engineer. <br />
-                  Quick to adapt to new technologies. <br />
-                  Strong teamwork skills, with attention to detail and
-                  responsibility in every task. - Always eager to learn and
-                  improve myself. <br />
-                  Weakness: Limited real-world experience. <br />
-                  Personal hobbies: Listening to music and having coffee in the
-                  early morning.
+
+                  <div class="quote-content">
+                    <div class="bold-text inline-block">Education:</div>
+
+                    Graduating student majoring in Software Engineering at UIT.
+                    <br />
+                    <div class="bold-text inline-block">Dream:</div>
+                    Aspiring to become a web engineer. <br />
+
+                    <div class="bold-text inline-block">Strong:</div>
+
+                    Quick to adapt to new technologies. <br />
+                    - Strong teamwork skills, with attention to detail and
+                    responsibility in every task. <br />
+                    - Always eager to learn and improve myself. <br />
+
+                    <div class="bold-text inline-block">Weakness:</div>
+
+                    Limited real-world experience. <br />
+
+                    <div class="bold-text inline-block">Hobbies:</div>
+
+                    Listening to music and having coffee in the early morning.
+                  </div>
                 </div>
               </div>
-              <div class="col l-6 m-6 c-12">
+              <div class="col l-3 m-3 c-12">
                 <div class="about-quick__img"></div>
               </div>
             </div>
@@ -238,10 +249,9 @@
     <!-- Skills -->
     <div id="skill">
       <div class="grid wide">
+        <div class="primary-heading text-center">Skill</div>
+
         <div class="row skill">
-          <div class="col l-12 m-12 c-12">
-            <div class="skill__heading">Skill</div>
-          </div>
           <div class="col l-12 m-12 c-12">
             <div class="skill__container">
               <div class="skill__item">
@@ -270,6 +280,7 @@
     <div id="project">
       <div class="grid wide">
         <div class="project">
+          <div class="primary-heading text-center">Project</div>
           <div class="row no-gutters project__card">
             <div class="col l-6 c-6 m-12">
               <div class="project-card__detail">

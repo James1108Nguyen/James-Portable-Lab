@@ -1,6 +1,6 @@
 :root {
-  --first-primary-color: #fff;
-  --second-primary-color: #000000;
+  --color-primary: #fff;
+  --color-secondary: #000000;
 }
 
 .header {
@@ -92,7 +92,7 @@
 
 /* Content */
 .content {
-  background-color: var(--second-primary-color);
+  background-color: var(--color-secondary);
   padding-bottom: 100vh;
 
   /* background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f6eacb 100%); */

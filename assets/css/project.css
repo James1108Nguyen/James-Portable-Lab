@@ -1,5 +1,5 @@
 #project {
-  background-color: var(--second-primary-color);
+  background-color: var(--color-secondary);
 }
 #project p {
   display: inline;
@@ -9,7 +9,7 @@
   padding: 32px 0;
 }
 .project-card__detail {
-  background-color: var(--first-primary-color);
+  background-color: var(--color-primary);
   border-radius: 15px 0px 0px 15px;
   height: 100%;
   padding-left: 15px;

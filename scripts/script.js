@@ -2,17 +2,35 @@
 
 // Blur Header
 window.addEventListener("scroll", function () {
-  const header = document.getElementsByClassName("header");
+  const header = document.getElementById("header");
+  const homeSection = document.getElementById("home");
+  const homeContent = document.querySelector("#home .home__info");
 
-  // Kiểm tra vị trí cuộn của trang
-  if (window.scrollY > 50) {
-    // Khi cuộn xuống hơn 50px
-    header[0].classList.add("blur"); // Thêm class blur
+  const maxHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+
+  const shrinkHeight = maxHeight - scrollPosition;
+  const triggerPoint = maxHeight * 0.4; // Điểm kích hoạt để thay đổi header
+
+  // Thay đổi chiều cao của section home
+  if (shrinkHeight > maxHeight * 0.5) {
+    homeSection.style.height = `${shrinkHeight}px`;
   } else {
-    header[0].classList.remove("blur"); // Bỏ class blur khi quay lại đầu trang
+    homeSection.style.height = `${maxHeight * 0.5}px`; // Đặt ngưỡng tối thiểu cho chiều cao
   }
+
+  if (window.scrollY > triggerPoint) {
+    header.classList.add("fixed");
+  } else {
+    header.classList.remove("fixed");
+  }
+
+  const opacityValue = Math.max(1 - scrollPosition / (maxHeight * 0.38), 0); // Giảm opacity nhanh hơn
+  homeContent.style.opacity = opacityValue;
 });
 
+//================================================================================================================================
+//================================================================================================================================
 function updateTime() {
   const options = {
     timeZone: "Asia/Ho_Chi_Minh",
@@ -29,14 +47,13 @@ function updateTime() {
   timeElement.textContent = currentTime;
 }
 
-// Gọi hàm updateTime mỗi giây để cập nhật thời gian
 setInterval(updateTime, 1000);
 
 // Hàm để cập nhật thời tiết từ Weatherbit
 function updateWeather() {
   const apiKey = "8835170ea31a43c3be19900b1d5ed54c"; // Thay YOUR_API_KEY bằng API key của bạn từ Weatherbit
-  const lat = "10.762622"; // Vĩ độ của Hồ Chí Minh City
-  const lon = "106.660172"; // Kinh độ của Hồ Chí Minh City
+  const lat = "10.762622";
+  const lon = "106.660172";
   const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}`;
   console.log(url);
   // fetch(url)
@@ -96,11 +113,10 @@ function updateWeather() {
       wind_spd: 2.6,
     },
   ];
-  const temperature = data[0].temp; // Lấy nhiệt độ từ phản hồi
+  const temperature = data[0].temp;
   console.log(temperature);
   const weatherElement = document.getElementById("weather");
   weatherElement.textContent = `${temperature}°C`;
-  weatherElement.style.color = "#333";
 }
 
 // Gọi hàm updateWeather khi trang được tải
