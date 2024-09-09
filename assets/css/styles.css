@@ -22,6 +22,7 @@ html {
   line-height: 1.6rem;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height));
 }
 
 .primary-heading,
@@ -43,20 +44,12 @@ html {
   border-left: #333 4px solid;
   padding-left: 20px;
 }
+#home,
+#about,
 #skill,
 #project {
-  scroll-margin-top: var(--header-height);
+  padding: calc(var(--header-height)) 0;
 }
-#about {
-  scroll-margin-top: 50vh;
-}
-.home,
-.about,
-.skill,
-.project {
-  padding: 50px 0;
-}
-
 #home {
   background-color: var(--first-background-color);
 }

@@ -3,13 +3,12 @@
 }
 
 #home {
-  padding-top: var(--header-height);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../images/me-cafe.JPG);
   background-position: top;
   background-size: cover;
   height: 100vh;
-  transition: height 0.2s ease; /* Chuyển đổi mượt mà khi thay đổi chiều cao */
+  transition: height 0.00001s ease; /* Chuyển đổi mượt mà khi thay đổi chiều cao */
 }
 #home .grid.wide {
   opacity: 1; /* Độ mờ ban đầu là 1 (hoàn toàn rõ ràng) */

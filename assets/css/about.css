@@ -1,5 +1,4 @@
 #about {
-  padding-top: var(--header-height);
   background-color: var(--color-secondary);
 }
 #about .primary-heading {

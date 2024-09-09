@@ -1,28 +1,40 @@
 // File: script.js
 
 const root = document.documentElement;
-let baseHeader = getComputedStyle(root).getPropertyValue("--header-height");
-baseHeader = parseFloat(baseHeader);
-root.style.setProperty("--header-expanded-height", baseHeader + 20 + "px");
+let baseHeaderHeight =
+  getComputedStyle(root).getPropertyValue("--header-height");
+baseHeaderHeight = parseFloat(baseHeaderHeight);
+console.log(baseHeaderHeight);
+root.style.setProperty(
+  "--header-expanded-height",
+  baseHeaderHeight + 20 + "px"
+);
+
+let isHomeShrunk = false; // Biến trạng thái để kiểm soát khi home giảm còn 50%
+
 window.addEventListener("scroll", function () {
-  const header = document.getElementById("header");
   const homeSection = document.getElementById("home");
-  const homeContent = document.querySelector("#home .home__info");
 
-  const maxHeight = window.innerHeight;
-  const scrollPosition = window.scrollY;
+  const maxHeight = window.innerHeight; // Chiều cao của viewport
+  const scrollPosition = window.scrollY; // Vị trí cuộn hiện tại của trang
 
-  const shrinkHeight = maxHeight - scrollPosition;
-  const triggerPoint = 20;
-  // const triggerPoint = maxHeight * 0.2;
+  const scrollThreshold = maxHeight * 0.4;
+  const minHeight = maxHeight * 0.5; // Chiều cao tối thiểu của section home là 50% viewport height
 
-  // Thay đổi chiều cao của section home
-  if (shrinkHeight > maxHeight * 0.5) {
-    homeSection.style.height = `${shrinkHeight}px`;
+  // Nếu vị trí cuộn lớn hơn điểm kết thúc (scrollThreshold), giữ nguyên chiều cao là 50%
+  if (scrollPosition >= scrollThreshold) {
+    homeSection.style.height = `${minHeight}px`;
   } else {
-    homeSection.style.height = `${maxHeight * 0.5}px`; // Đặt ngưỡng tối thiểu cho chiều cao
+    // Nếu chưa cuộn đến điểm kết thúc, giảm dần chiều cao
+    const newHeight =
+      maxHeight - (scrollPosition / scrollThreshold) * (maxHeight - minHeight);
+    homeSection.style.height = `${newHeight}px`;
   }
-
+  //================================================================
+  const homeContent = document.querySelector("#home .home__info");
+  const header = document.getElementById("header");
+  const triggerPoint = 20;
+  // Kiểm tra trạng thái header
   if (window.scrollY > triggerPoint) {
     header.classList.add("fixed");
     header.classList.remove("expanded");
@@ -31,10 +43,46 @@ window.addEventListener("scroll", function () {
     header.classList.add("expanded");
   }
 
+  // Điều chỉnh opacity cho nội dung home
   const opacityValue = Math.max(1 - scrollPosition / (maxHeight * 0.38), 0); // Giảm opacity nhanh hơn
   homeContent.style.opacity = opacityValue;
 });
 
+//================================================================================================================================
+// Xử lý vấn đề scroll không chuẩn do giảm chiều cao section home
+
+const links = document.querySelectorAll('a[href^="#"]');
+const header = document.getElementById("header");
+const homeSection = document.getElementById("home");
+links.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    // Tính toán vị trí cuộn
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const homeHeight = parseFloat(window.getComputedStyle(homeSection).height);
+    const maxHeight = window.innerHeight;
+
+    let offsetPosition;
+    offsetPosition =
+      elementPosition - (homeHeight - maxHeight * 0.5) - baseHeaderHeight;
+    console.log("View width:" + maxHeight);
+    console.log("Home height:" + homeHeight);
+    console.log("Trừ header height:" + homeHeight);
+    console.log("số px cần cuộn" + offsetPosition);
+
+    // Cuộn trang với vị trí đã tính toán
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  });
+});
+
+//================================================================================================================================
 //================================================================================================================================
 //================================================================================================================================
 function updateTime() {

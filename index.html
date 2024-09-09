@@ -44,23 +44,21 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <div></div>
-
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-      <a
-        class="sidebar__close-btn close-btn"
-        href="javascript:void(0)"
-        onclick="closeSidebar()"
-      >
-        <div class="fas fa-times"></div>
-      </a>
       <div class="sidebar__nav">
+        <div
+          class="sidebar__close-btn close-btn"
+          href="javascript:void(0)"
+          onclick="closeSidebar()"
+        >
+          <div class="fas fa-times"></div>
+        </div>
         <a href="#home">Home</a>
         <a href="#about">About me</a>
         <a href="#project">Project</a>
         <a href="#skill">Skills</a>
-        <a href="#">Contact</a>
+        <a href="#home">Contact</a>
       </div>
       <li class="sidebar__local">
         <div class="sidebar-local-container">
@@ -80,6 +78,7 @@
     </div>
     <!-- Overlay -->
     <div id="overlay" class="overlay"></div>
+
     <!-- Header -->
     <div id="header" class="expanded">
       <div class="grid wide">
@@ -99,7 +98,7 @@
 
             <li class="nav-list__item"><a href="#skill">Skills</a></li>
 
-            <li class="nav-list__item"><a href="#">Contact</a></li>
+            <li class="nav-list__item"><a href="#home">Contact</a></li>
 
             <li class="header__local">
               <div class="header-local-container">
