@@ -23,6 +23,13 @@
     --header-height: 40px;
     --logo-height: 30px;
   }
+
+  .project-card__detail {
+    border-radius: 25px 25px 0px 0px;
+  }
+  .project-card__img-slider {
+    border-radius: 0px 0px 25px 25px;
+  }
 }
 
 /* Mobile */
