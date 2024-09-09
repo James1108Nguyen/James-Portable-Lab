@@ -48,6 +48,14 @@
 }
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+  .nav-list__item,
+  .nav-list__item-logo {
+    flex: 0 0 12%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
   .about-me__image {
     height: 400px;
   }

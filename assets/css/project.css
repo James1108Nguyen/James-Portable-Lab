@@ -9,14 +9,17 @@
   padding: 32px 0;
 }
 .project-card__detail {
-  background-color: var(--color-primary);
-  border-radius: 15px 0px 0px 15px;
+  background-color: var(--color-background-light-2);
+  border-radius: 25px 0px 0px 25px;
   height: 100%;
   padding-left: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   align-content: center;
+}
+.project-card__img-slider {
+  border-radius: 0px 25px 25px 0px;
 }
 .project-card__detail > div {
   flex-basis: 100%;

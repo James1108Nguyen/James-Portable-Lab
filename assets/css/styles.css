@@ -14,10 +14,14 @@
 :root {
   --color-primary: #4a3f35;
   --color-secondary: #d3bba3;
+
   --color-accent: #6b8e23;
+  --color-background-light: #f9f9f9;
+  --color-background-light-2: #eeeeee;
   --color-background-dark: #1a1a1a;
-  --color-highlight: #a0784f;
-  --header-height: 65px;
+  --color-highlight: #caa021;
+  --header-height: 75px;
+  --header-expanded-height: calc(var(--header-height) +20px);
 }
 html {
   font-family: "Roboto", sans-serif;
@@ -52,7 +56,7 @@ html {
 .primary-heading,
 .secondary-heading {
   line-height: 1.1;
-  color: var(--color-accent);
+  color: var(--color-highlight);
   font-weight: 600;
 }
 
@@ -68,11 +72,12 @@ html {
   border-left: #333 4px solid;
   padding-left: 20px;
 }
-#home,
-#about,
 #skill,
 #project {
-  scroll-margin-top: calc(var(--header-height)-20px);
+  scroll-margin-top: var(--header-height);
+}
+#about {
+  scroll-margin-top: 50vh;
 }
 .home,
 .about,
@@ -81,12 +86,20 @@ html {
   padding: 50px 0;
 }
 
-#home,
-#skill {
+#home {
   background-color: var(--first-background-color);
 }
 
-#about,
+#about {
+  background-color: var(--color-background-light);
+}
+#skill {
+  background-color: var(--color-background-light-2);
+}
 #project {
+  background-color: var(--color-background-light);
+}
+
+#footer {
   background-color: var(--color-secondary);
 }

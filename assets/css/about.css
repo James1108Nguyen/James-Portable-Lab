@@ -2,6 +2,9 @@
   padding-top: var(--header-height);
   background-color: var(--color-secondary);
 }
+#about .primary-heading {
+  padding-top: 0;
+}
 .about-detail {
 }
 .about-quick {

@@ -21,11 +21,17 @@
   background-color: var(--color-primary);
   box-shadow: 4px 0 20px -5px rgba(137, 137, 137, 0.2);
 }
+#header.expanded {
+  height: var(--header-expanded-height);
+}
+#header .grid.wide {
+  height: 100%;
+}
 
 .nav {
   display: block;
   width: 100%;
-  height: var(--header-height);
+  height: 100%;
 }
 .nav__list {
   display: flex;
@@ -82,7 +88,6 @@
 
 .nav-list__item-local {
   flex: 0 0 15%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: end;

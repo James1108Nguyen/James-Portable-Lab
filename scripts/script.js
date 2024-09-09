@@ -1,5 +1,10 @@
 // File: script.js
 
+const root = document.documentElement;
+let baseHeader = getComputedStyle(root).getPropertyValue("--header-height");
+baseHeader = parseFloat(baseHeader);
+console.log("Base header height: " + baseHeader);
+root.style.setProperty("--header-expanded-height", baseHeader + 20 + "px");
 // Blur Header
 window.addEventListener("scroll", function () {
   const header = document.getElementById("header");
@@ -10,7 +15,8 @@ window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
 
   const shrinkHeight = maxHeight - scrollPosition;
-  const triggerPoint = maxHeight * 0.4; // Điểm kích hoạt để thay đổi header
+  const triggerPoint = 20;
+  // const triggerPoint = maxHeight * 0.2;
 
   // Thay đổi chiều cao của section home
   if (shrinkHeight > maxHeight * 0.5) {
@@ -21,8 +27,10 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > triggerPoint) {
     header.classList.add("fixed");
+    header.classList.remove("expanded");
   } else {
     header.classList.remove("fixed");
+    header.classList.add("expanded");
   }
 
   const opacityValue = Math.max(1 - scrollPosition / (maxHeight * 0.38), 0); // Giảm opacity nhanh hơn
@@ -51,11 +59,10 @@ setInterval(updateTime, 1000);
 
 // Hàm để cập nhật thời tiết từ Weatherbit
 function updateWeather() {
-  const apiKey = "8835170ea31a43c3be19900b1d5ed54c"; // Thay YOUR_API_KEY bằng API key của bạn từ Weatherbit
+  const apiKey = "8835170ea31a43c3be19900b1d5ed54c";
   const lat = "10.762622";
   const lon = "106.660172";
   const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}`;
-  console.log(url);
   // fetch(url)
   //   .then((response) => response.json())
   //   .then((data) => {
@@ -171,7 +178,7 @@ function autoSlide(sliderId) {
   // Tự động chuyển slide mỗi 3 giây
   slider.autoSlideInterval = setInterval(function () {
     showSlides(sliderId, slider.currentSlideIndex + 1);
-  }, 3000);
+  }, 1500);
 }
 
 // Hiển thị slide hiện tại và dừng tự động chuyển khi người dùng tương tác

@@ -48,7 +48,7 @@
 .info__h1,
 .info__name,
 .info__name-small,
-.info__name-lagre,
+.info__name-large,
 .info__job,
 .info__detail,
 .info__contact,
@@ -69,11 +69,11 @@
 .info__name-small {
   font-size: 2.5rem;
 }
-.info__name-lagre {
+.info__name-large {
   margin-left: 5px;
   color: #1f8bab;
 }
-.info__name-lagre,
+.info__name-large,
 .info__job {
   font-size: 3.5rem;
 }
@@ -91,7 +91,7 @@
 .info__contact {
   font-size: 1.4rem;
   padding: 5px 8px;
-  border-left: 3px solid #333;
+  border-left: 3px solid #ffffff;
   animation-duration: 2.5s;
 }
 
