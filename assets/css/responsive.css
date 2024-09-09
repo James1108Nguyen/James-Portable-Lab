@@ -17,6 +17,14 @@
   }
 }
 
+/* Small mobile */
+@media (max-width: 739px) {
+  :root {
+    --header-height: 40px;
+    --logo-height: 30px;
+  }
+}
+
 /* Mobile */
 @media (max-width: 740px) {
   .hide-on-mobile {
@@ -46,6 +54,7 @@
     background-color: rgb(61, 61, 61);
   }
 }
+
 @media (min-width: 1113px) {
 }
 /* Tablet */
@@ -83,5 +92,7 @@
     padding-bottom: 40px;
   }
 }
+
+/* Large tablet + PC low resolution*/
 @media (min-width: 1024px) and (max-width: 1239px) {
 }

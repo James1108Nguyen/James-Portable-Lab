@@ -429,15 +429,20 @@
 
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
-  .wide {
-    width: 644px;
+  .grid.wide {
+    max-width: 644px;
+  }
+}
+@media (max-width: 739px) {
+  .grid.wide {
+    max-width: calc(100vw - 60px);
   }
 }
 
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
-  .wide {
-    width: 984px;
+  .grid.wide {
+    max-width: 984px;
   }
 
   .wide .row {

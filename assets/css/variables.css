@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #4a3f35;
+  --color-primary-opaque: #4a3f35dd;
+  --color-secondary: #d3bba3;
+
+  --color-accent: #6b8e23;
+  --color-background-light: #f9f9f9;
+  --color-background-light-2: #eeeeee;
+  --color-background-dark: #1a1a1a;
+  --color-highlight: #caa021;
+  --header-height: 75px;
+  --header-expanded-height: 0px;
+  --side-bar-width: 250px;
+  --logo-height: 50px;
+}

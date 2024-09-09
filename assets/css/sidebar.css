@@ -98,7 +98,6 @@
   font-size: 2rem;
   color: #818181;
   display: block;
-  line-height: 3;
   transition: color 0.3s ease, font-size 0.3s ease;
 }
 
@@ -135,7 +134,7 @@
   position: absolute;
   display: none;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: calc(var(--logo-height) / 2);
   color: #fff;
   right: 0;
   height: 100%;

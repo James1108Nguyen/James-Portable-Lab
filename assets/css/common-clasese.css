@@ -1,0 +1,21 @@
+.bold-text {
+  font-weight: bold !important;
+}
+.inline-block {
+  display: inline-block;
+}
+.space-between {
+  justify-content: space-between !important;
+}
+
+.justify-center {
+  display: flex !important;
+  justify-content: center !important;
+}
+.align-center {
+  display: flex !important;
+  align-items: center !important;
+}
+.text-center {
+  text-align: center !important;
+}

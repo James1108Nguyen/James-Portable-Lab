@@ -1,3 +1,5 @@
+@import url(variables.css);
+@import url(common-clasese.css);
 @import url(animations.css);
 @import url(grid.css);
 @import url(header.css);
@@ -12,20 +14,7 @@
 * {
   box-sizing: inherit;
 }
-:root {
-  --color-primary: #4a3f35;
-  --color-primary-opaque: #4a3f35dd;
-  --color-secondary: #d3bba3;
 
-  --color-accent: #6b8e23;
-  --color-background-light: #f9f9f9;
-  --color-background-light-2: #eeeeee;
-  --color-background-dark: #1a1a1a;
-  --color-highlight: #caa021;
-  --header-height: 75px;
-  --header-expanded-height: calc(var(--header-height) +20px);
-  --side-bar-width: 250px;
-}
 html {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
@@ -35,27 +24,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.bold-text {
-  font-weight: bold !important;
-}
-.inline-block {
-  display: inline-block;
-}
-.space-between {
-  justify-content: space-between !important;
-}
-
-.justify-center {
-  display: flex !important;
-  justify-content: center !important;
-}
-.align-center {
-  display: flex !important;
-  align-items: center !important;
-}
-.text-center {
-  text-align: center !important;
-}
 .primary-heading,
 .secondary-heading {
   line-height: 1.1;

@@ -61,7 +61,8 @@
 
 .header__logo img,
 .header-local-container {
-  height: 50px;
+  height: var(--logo-height);
+  transition: all 1s ease;
 }
 .nav-list__item + .nav-list__item {
   margin-left: 10px;
