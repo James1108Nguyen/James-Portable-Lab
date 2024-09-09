@@ -3,9 +3,7 @@
 const root = document.documentElement;
 let baseHeader = getComputedStyle(root).getPropertyValue("--header-height");
 baseHeader = parseFloat(baseHeader);
-console.log("Base header height: " + baseHeader);
 root.style.setProperty("--header-expanded-height", baseHeader + 20 + "px");
-// Blur Header
 window.addEventListener("scroll", function () {
   const header = document.getElementById("header");
   const homeSection = document.getElementById("home");
@@ -123,7 +121,6 @@ function updateWeather() {
     },
   ];
   const temperature = data[0].temp;
-  console.log(temperature);
   const weatherElement = document.getElementsByClassName("weather");
   for (let i = 0; i < weatherElement.length; i++) {
     weatherElement[i].textContent = `${temperature}°C`;
@@ -200,3 +197,26 @@ document.documentElement.style.setProperty(
   "--scrollbar-width",
   `${scrollbarWidth}px`
 );
+
+/* Handle event open/close sidebar */
+const sidebar = document.getElementById("sidebar");
+const openBtn = document.getElementById("openSidebarBtn");
+const closeBtn = document.querySelector(".sidebar__close-btn");
+const overlay = document.getElementById("overlay");
+
+// Mở sidebar và hiển thị overlay
+openBtn.addEventListener("click", () => {
+  sidebar.classList.add("open");
+  overlay.classList.add("show"); // Hiển thị overlay
+});
+
+// Đóng sidebar và ẩn overlay
+const closeSidebar = () => {
+  sidebar.classList.remove("open");
+  overlay.classList.remove("show"); // Ẩn overlay
+};
+
+closeBtn.addEventListener("click", closeSidebar);
+
+// Đóng sidebar khi nhấn vào overlay
+overlay.addEventListener("click", closeSidebar);

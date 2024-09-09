@@ -1,84 +1,54 @@
-/* Sidebar */
+/* Sidebar khi ẩn */
 .sidebar {
-  height: 100%;
-  width: 0;
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  z-index: 9999;
   width: var(--side-bar-width);
-
-  /* sort element */
+  height: 100%;
+  background-color: #111;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  z-index: 9999;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  will-change: transform;
 }
+
+/* Sidebar khi mở */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Nút đóng sidebar */
+.sidebar__close-btn {
+  width: 100%;
+  font-size: 3.6rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: end;
+}
+.sidebar__close-btn div {
+  padding: 12px;
+}
+.sidebar__close-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Căn chỉnh phần tử con của sidebar */
 .sidebar > div {
   flex-basis: 100%;
 }
-.sidebar::after {
-  content: "";
-  display: block;
-  position: fixed;
-  height: 100vh;
-  background-color: rgba(181, 163, 150, 0.3);
-  top: 0;
-  left: 0;
-  right: var(--side-bar-width);
-  bottom: 0;
-}
 
+/* Thông tin địa phương (location, time, weather) */
 .sidebar__local {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.sidebar__nav a {
-  padding: 8px 32px;
-  text-decoration: none;
-  font-size: 2rem;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  line-height: 1.2;
-  transition: all 0.3s linear;
-}
-.sidebar__nav {
-  display: flex;
-  flex-flow: column wrap;
-}
-.sidebar__nav a + a {
-  margin-top: 10px;
-}
-.sidebar__nav a:hover {
-  color: #f1f1f1;
-  font-size: 2.1rem;
-}
-
-/* Close button */
-.sidebar__close-btn {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 3.6rem;
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar__close-btn:hover {
-  color: #f1f1f1;
-}
-
-/* Local information (location, time, weather) */
-.sidebar__local {
   padding: 20px;
   list-style: none;
 }
@@ -86,19 +56,23 @@
 .sidebar-local-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+}
+
+.sidebar-local__location,
+.sidebar-local__time,
+.sidebar-local__weather-temp {
+  color: #fff;
 }
 
 .sidebar-local__location {
   font-size: 1.8rem;
-  color: #fff;
   margin-bottom: 10px;
 }
 
 .sidebar-local__time {
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
   margin-bottom: 10px;
 }
 
@@ -109,9 +83,60 @@
 
 .sidebar-local__weather-icon {
   margin-right: 10px;
+  height: 15px;
 }
 
-.sidebar-local__weather-temp {
-  font-size: 1.8rem;
+/* Navigation links trong sidebar */
+.sidebar__nav {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.sidebar__nav a {
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #818181;
+  display: block;
+  line-height: 3;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.sidebar__nav a + a {
+  margin-top: 10px;
+}
+
+.sidebar__nav a:hover {
+  color: #f1f1f1;
+  font-size: 2.1rem;
+}
+
+/* Overlay ban đầu bị ẩn */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0); /* Màu nền mờ */
+  z-index: 900; /* Phía sau sidebar */
+  opacity: 0; /* Mờ hoàn toàn */
+  visibility: hidden; /* Ẩn nhưng vẫn giữ trong flow */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Thêm hiệu ứng transition */
+}
+
+/* Khi overlay hiển thị */
+.overlay.show {
+  opacity: 0.2; /* Độ mờ 20% */
+  visibility: visible; /* Hiển thị phần tử */
+}
+
+#openSidebarBtn {
+  position: absolute;
+  display: none;
+  align-items: center;
+  font-size: 2.5rem;
   color: #fff;
+  right: 0;
+  height: 100%;
 }
