@@ -34,6 +34,8 @@
 .sidebar__close-btn div {
   padding: 12px;
 }
+.sidebar__close-btn {
+}
 .sidebar__close-btn:hover {
   color: #f1f1f1;
 }
@@ -93,7 +95,6 @@
 }
 
 .sidebar__nav a {
-  padding-left: 20px;
   padding: 10px 0px 10px 20px;
   text-decoration: none;
   font-size: 2rem;

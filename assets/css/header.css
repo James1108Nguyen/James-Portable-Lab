@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   z-index: 999;
-  transition: all 1s ease; /* Thêm hiệu ứng transition */
+  /* transition: all 1s ease; Thêm hiệu ứng transition */
+  transition: height 2s cubic-bezier(0.25, 1.1, 0.36, 0.79);
   height: var(--header-height);
 }
 #header.fixed {
@@ -70,7 +71,8 @@
 
 .nav-list__item a {
   margin: auto;
-  line-height: var(--header-height);
+  height: calc(var(--header-height) + 20px);
+  line-height: calc(var(--header-height) + 20px);
   font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
@@ -78,7 +80,13 @@
   color: var(--color-secondary);
   opacity: 0.8;
   filter: brightness(125%);
+  transition: h 2s cubic-bezier(0.25, 1.1, 0.36, 0.79);
 }
+#header.expanded .nav-list__item a {
+  line-height: var(--header-height);
+  height: var(--header-height);
+}
+
 .nav-list__item a:hover {
   opacity: 1;
 }

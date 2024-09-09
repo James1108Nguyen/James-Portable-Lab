@@ -47,7 +47,8 @@ html {
 #home,
 #about,
 #skill,
-#project {
+#project,
+#resume {
   padding: calc(var(--header-height)) 0;
 }
 #home {
