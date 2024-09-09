@@ -51,18 +51,20 @@ function updateTime() {
   const timeFormat = new Intl.DateTimeFormat([], options);
   const currentTime = timeFormat.format(new Date());
 
-  const timeElement = document.getElementById("time");
-  timeElement.textContent = currentTime;
+  const timeElements = document.getElementsByClassName("time");
+  for (let i = 0; i < timeElements.length; i++) {
+    timeElements[i].textContent = currentTime;
+  }
 }
 
 setInterval(updateTime, 1000);
 
 // Hàm để cập nhật thời tiết từ Weatherbit
 function updateWeather() {
-  const apiKey = "8835170ea31a43c3be19900b1d5ed54c";
-  const lat = "10.762622";
-  const lon = "106.660172";
-  const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}`;
+  // const apiKey = "8835170ea31a43c3be19900b1d5ed54c";
+  // const lat = "10.762622";
+  // const lon = "106.660172";
+  // const url = `https://api.weatherbit.io/v2.0/current?lat=${lat}&lon=${lon}&key=${apiKey}`;
   // fetch(url)
   //   .then((response) => response.json())
   //   .then((data) => {
@@ -122,8 +124,10 @@ function updateWeather() {
   ];
   const temperature = data[0].temp;
   console.log(temperature);
-  const weatherElement = document.getElementById("weather");
-  weatherElement.textContent = `${temperature}°C`;
+  const weatherElement = document.getElementsByClassName("weather");
+  for (let i = 0; i < weatherElement.length; i++) {
+    weatherElement[i].textContent = `${temperature}°C`;
+  }
 }
 
 // Gọi hàm updateWeather khi trang được tải
@@ -190,3 +194,9 @@ function currentSlide(sliderId, n) {
 
 // Khởi tạo slider cho các project khác nhau
 autoSlide("slider-project-1");
+
+const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+document.documentElement.style.setProperty(
+  "--scrollbar-width",
+  `${scrollbarWidth}px`
+);

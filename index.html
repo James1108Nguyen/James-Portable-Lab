@@ -45,6 +45,36 @@
   </head>
   <body>
     <div></div>
+
+    <div class="sidebar" id="sidebar">
+      <a class=" sidebar__close-btn close-btn" href="javascript:void(0)"  onclick="closeSidebar()">&times;</a>
+      <div class="sidebar__nav">
+        <a href="#home">Home</a>
+        <a href="#about">About me</a>
+        <a href="#project">Project</a>
+        <a href="#skill">Skills</a>
+        <a href="#">Contact</a>
+      </div>
+      <li class="sidebar__local">
+        <div class="sidebar-local-container">
+          <div class="sidebar-local__location">HCM City, Vietnam</div>
+          <div class="sidebar-local__time time" id="time">00:00:00 -M</div>
+          <div class="sidebar-local__weather">
+            <img
+              src="./assets/images/cloudy.png"
+              height="15px"
+              width="auto"
+              class="sidebar-local__weather-icon"
+            />
+            <div class="weather sidebar-local__weather-temp">
+              00.0°C
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+
+    </div>
     <!-- Header -->
     <div id="header" class="expanded">
       <div class="grid wide">
@@ -62,18 +92,18 @@
 
             <li class="nav-list__item"><a href="#">Contact</a></li>
 
-            <li class="nav-list__item-local">
-              <div class="local-info">
-                <div class="local-info__location">HCM City, Vietnam</div>
-                <div class="local-info__time" id="time">00:00:00 -M</div>
-                <div class="local-info__weather">
+            <li class="header__local">
+              <div class="header-local-container">
+                <div class="header-local__location">HCM City, Vietnam</div>
+                <div class="header-local__time time" id="time">00:00:00 -M</div>
+                <div class="header-local__weather">
                   <img
                     src="./assets/images/cloudy.png"
                     height="15px"
                     width="auto"
-                    class="local-info__weather-icon"
+                    class="header-local__weather-icon"
                   />
-                  <div id="weather" class="local-info__weather-description">
+                  <div class="weather header-local__weather-temp">
                     00.0°C
                   </div>
                 </div>

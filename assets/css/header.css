@@ -64,7 +64,7 @@
 }
 
 .nav-list__item-logo img,
-.local-info {
+.header-local-container {
   height: 50px;
 }
 .nav-list__item + .nav-list__item {
@@ -86,13 +86,13 @@
   opacity: 1;
 }
 
-.nav-list__item-local {
+.header__local {
   flex: 0 0 15%;
   display: flex;
   align-items: center;
   justify-content: end;
 }
-.local-info {
+.header-local-container {
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
@@ -100,7 +100,7 @@
   color: var(--color-secondary);
   position: relative;
 }
-.local-info::after {
+.header-local-container::after {
   content: "";
   display: block;
   position: absolute;
@@ -110,27 +110,27 @@
   background-color: var(--color-secondary);
 }
 
-.local-info__location {
+.header-local__location {
   font-size: 1.3rem; /* Kích thước nhỏ hơn để hiển thị địa điểm */
   opacity: 0.9;
 }
 
-.local-info__time,
-.local-info__weather {
+.header-local__time,
+.header-local__weather {
   font-weight: bold;
   letter-spacing: 0.5px;
 }
-.local-info__time {
+.header-local__time {
   font-size: 1.5rem; /* Kích thước lớn hơn để hiển thị thời gian */
 }
-.local-info__weather {
+.header-local__weather {
   font-size: 1.3rem;
 }
-.local-info__weather {
+.header-local__weather {
   display: flex;
 }
-.local-info__weather-icon {
+.header-local__weather-icon {
   margin-right: 10px;
 }
-.local-info__weather-description {
+.header-local__weather-temp {
 }

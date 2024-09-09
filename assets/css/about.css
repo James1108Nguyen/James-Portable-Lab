@@ -32,7 +32,7 @@
 .about-quick__img {
   background-position: left;
   position: relative;
-  z-index: 1; /* Đặt lớp chấm chấm dưới ảnh */
+  /* z-index: 1; Đặt lớp chấm chấm dưới ảnh */
 }
 
 .about-quick__img::after {
@@ -42,7 +42,7 @@
   left: -30px; /* Điều chỉnh vị trí của chấm chấm */
   width: 150px; /* Kích thước của vùng chứa chấm chấm */
   height: 150px; /* Kích thước của vùng chứa chấm chấm */
-  z-index: -1; /* Đặt lớp chấm chấm dưới ảnh */
+  /* z-index: -1; Đặt lớp chấm chấm dưới ảnh */
   opacity: 0.8; /* Điều chỉnh độ mờ nếu cần */
 }
 
