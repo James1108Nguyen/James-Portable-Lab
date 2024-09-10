@@ -5,18 +5,18 @@
   .hide-on-mobile-tablet {
     display: none !important;
   }
-
   .nav-list__item {
     display: none;
   }
-
   .info__name-large,
   .info__job {
     font-size: 3.2rem;
   }
-
   #openSidebarBtn {
     display: flex;
+  }
+  .footer__container {
+    flex-wrap: wrap-reverse;
   }
 }
 

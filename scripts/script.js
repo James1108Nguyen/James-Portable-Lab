@@ -7,7 +7,7 @@ baseHeaderHeight = parseFloat(baseHeaderHeight);
 console.log(baseHeaderHeight);
 root.style.setProperty(
   "--header-expanded-height",
-  baseHeaderHeight + 20 + "px"
+  baseHeaderHeight + 10 + "px"
 );
 
 let isHomeShrunk = false; // Biến trạng thái để kiểm soát khi home giảm còn 50%

@@ -2,6 +2,7 @@
   font-size: 2rem;
   line-height: normal;
   padding: 75px 0;
+  position: relative;
 }
 
 .footer a:visited,
@@ -10,6 +11,11 @@
   color: #333;
 }
 
+.footer__copyright,
+.footer__contact,
+.footer__quick-link {
+  padding: 15px 0;
+}
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
@@ -27,12 +33,15 @@
 
 .footer__contact {
   display: flex;
-  padding: 5px 0;
 }
 
 .footer__contact {
   display: flex;
   flex-wrap: wrap;
+}
+.footer__social-media,
+.footer__info {
+  width: 100%;
 }
 .footer__social-media a {
   font-size: 2.4rem;
@@ -51,8 +60,33 @@
 }
 
 .footer__quick-link {
+  padding: 10px 0;
   height: 100%;
-  justify-content: space-between;
   font-size: 2rem;
   font-weight: 600;
+}
+.footer__quick-link a {
+  padding: 6px 0 6px 10px;
+}
+
+.footer__scroll-to-home {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  background-color: #33333367;
+  /* căn giữa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.2;
+}
+.footer__scroll-to-home:hover {
+  opacity: 5;
+}
+.footer__scroll-to-home i {
+  font-size: 30px;
+  color: #fff;
 }
