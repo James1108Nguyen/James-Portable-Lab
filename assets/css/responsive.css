@@ -38,6 +38,13 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+  .about-detail__img,
+  .about-quick__img {
+    margin: 10px 0;
+  }
+  .about-quick {
+    flex-direction: row-reverse;
+  }
   .hide-on-mobile {
     display: none !important;
   }

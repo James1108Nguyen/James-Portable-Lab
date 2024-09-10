@@ -19,7 +19,7 @@
   height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .about-detail__img {
@@ -50,6 +50,6 @@
 .about-detail__content,
 .about-quick__content {
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: var(--color-primary);
 }

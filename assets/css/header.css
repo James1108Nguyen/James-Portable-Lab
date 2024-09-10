@@ -1,28 +1,26 @@
 /* Header */
 #header {
-  position: absolute; /* Đảm bảo header luôn nằm ở trên cùng */
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 999; /* Đảm bảo header luôn ở trên các thành phần khác */
-  transition: height 2s cubic-bezier(0.25, 1.1, 0.36, 0.79); /* Hiệu ứng chuyển khi header thay đổi kích thước */
+  z-index: 999;
+  transition: height 2s ease;
   height: var(--header-height);
 }
 
 #header.fixed {
   position: fixed;
-  background-color: var(
-    --color-primary-opaque
-  ); /* Nền mờ khi header được cố định */
+  background-color: var(--color-primary-opaque);
   top: 0;
   left: 0;
   width: 100%;
-  backdrop-filter: blur(5px); /* Hiệu ứng mờ */
-  box-shadow: 0px 10px 18px 3px rgb(129 129 129 / 10%); /* Hiệu ứng bóng đổ */
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 10px 18px 3px rgb(129 129 129 / 10%);
 }
 
 #header.expanded {
-  height: var(--header-expanded-height); /* Header mở rộng */
+  height: var(--header-expanded-height);
 }
 
 #header .grid.wide {
@@ -64,9 +62,9 @@
 }
 
 .header__logo img {
-  filter: invert(1); /* Đảo màu logo */
-  height: var(--logo-height); /* Chiều cao logo */
-  transition: all 1.5s linear; /* Hiệu ứng chuyển mượt */
+  filter: invert(1);
+  height: var(--logo-height);
+  transition: all 1.5s linear;
 }
 
 .nav-list__item + .nav-list__item {
@@ -77,16 +75,16 @@
   margin: auto;
   font-size: 1.5rem;
   font-weight: 600;
-  text-decoration: none; /* Xóa gạch chân mặc định */
+  text-decoration: none;
   letter-spacing: 0.5px;
-  color: var(--color-secondary); /* Màu chữ */
+  color: var(--color-secondary);
   opacity: 0.8;
-  filter: brightness(125%); /* Tăng độ sáng */
-  transition: h 2s cubic-bezier(0.25, 1.1, 0.36, 0.79); /* Hiệu ứng chuyển màu khi hover */
+  filter: brightness(125%);
+  transition: h 2s ease;
 }
 
 .nav-list__item a:hover {
-  opacity: 1; /* Hiệu ứng hover tăng độ rõ */
+  opacity: 1;
 }
 
 /* Local Information (Location, Time, Weather) */
@@ -113,11 +111,11 @@
   height: 75%;
   width: 1.5px;
   left: -25px;
-  background-color: var(--color-secondary); /* Đường phân cách */
+  background-color: var(--color-secondary);
 }
 
 .header-local__location {
-  font-size: 1.3rem; /* Kích thước cho vị trí */
+  font-size: 1.3rem;
   opacity: 0.9;
 }
 
@@ -128,7 +126,7 @@
 }
 
 .header-local__time {
-  font-size: 1.5rem; /* Kích thước lớn cho thời gian */
+  font-size: 1.5rem;
 }
 
 .header-local__weather {
@@ -141,5 +139,4 @@
 }
 
 .header-local__weather-temp {
-  /* Kích thước nhiệt độ thời tiết */
 }
