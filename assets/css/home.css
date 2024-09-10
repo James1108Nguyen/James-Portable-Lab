@@ -1,11 +1,16 @@
 /* Home Section */
 #home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../images/me-cafe.JPG);
+    url(../images/me-cafe.jpg);
   background-position: top;
   background-size: cover;
   height: 100vh;
   transition: height 0.00001s ease;
+}
+@supports (background-image: url(../images/me-cafe.webp)) {
+  #home {
+    background-image: url(../images/me-cafe.webp);
+  }
 }
 
 #home .grid.wide {

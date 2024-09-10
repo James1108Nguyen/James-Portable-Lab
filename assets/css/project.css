@@ -1,36 +1,35 @@
 /* Section Project */
 #project {
-  background-color: var(--color-secondary); /* Màu nền chính của section */
+  background-color: var(--color-secondary);
 }
 
 #project p {
   display: inline;
 }
 
-.row.project__card {
-  padding: 32px 0; /* Khoảng cách giữa các thẻ card trong project */
+.project__card + .project__card {
+  padding: 32px 0;
 }
 
 /* Phần chi tiết project */
 .project-card__detail {
-  border-radius: 25px 0px 0px 25px; /* Bo góc bên trái của thẻ chi tiết project */
-  background-color: var(
-    --color-background-light-3
-  ); /* Màu nền nhẹ cho card project */
+  border-radius: 25px 0px 0px 25px;
+  background-color: var(--color-background-light-3);
   height: 100%;
   padding-left: 15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
 }
 
 .project-card__img-slider {
-  border-radius: 0px 25px 25px 0px; /* Bo góc bên phải của phần ảnh slider */
+  border-radius: 0px 25px 25px 0px;
+  height: 100%;
 }
 
 .project-card__detail > div {
-  flex-basis: 100%; /* Đảm bảo các phần tử con chiếm 100% chiều ngang */
+  flex-basis: 100%;
 }
 
 .project__card-title {
@@ -42,7 +41,7 @@
 }
 
 .project-card__name-detail {
-  font-size: 2.4rem; /* Tên project lớn và rõ ràng */
+  font-size: 2.4rem;
   line-height: normal;
   padding-top: 20px;
 }
@@ -64,7 +63,7 @@
 .tech-tag-container {
   display: flex;
   margin: 10px 0;
-  flex-wrap: wrap; /* Cho phép các thẻ công nghệ xuống dòng khi cần */
+  flex-wrap: wrap;
 }
 
 .tech-tag {
@@ -134,11 +133,11 @@
 }
 
 #project a:visited {
-  color: inherit; /* Bỏ màu tím khi đã truy cập */
+  color: inherit;
 }
 
 .project__card-description {
-  line-height: 1.3; /* Điều chỉnh line-height cho phần mô tả */
+  line-height: 1.3;
 }
 
 /* =================================== */
@@ -148,16 +147,15 @@
   max-width: 100%;
   margin: auto;
   overflow: hidden;
-  height: 400px; /* Chiều cao cố định */
-  min-height: 300px; /* Chiều cao tối thiểu */
-  max-height: 600px; /* Chiều cao tối đa */
+  height: 100%;
+  min-height: 300px;
+  max-height: 600px;
   background-color: #f8f4ef;
   border-radius: 0px 15px 15px 0px;
 }
 
 .slider,
-.slide,
-.slide img {
+.slide {
   height: 100%;
 }
 
@@ -167,7 +165,7 @@
 }
 
 .slide {
-  position: absolute; /* Các slide chồng lên nhau */
+  position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -183,6 +181,13 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease-in-out, visibility 0s;
+}
+.slide picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide img {

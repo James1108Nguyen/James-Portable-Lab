@@ -24,7 +24,7 @@
 
 .about-detail__img {
   animation: fadeInLeft 2.5s linear;
-  background-image: url(../images/about-me/0.jpg);
+  background-image: url(../images/about-me/0.jpg); /* Fall back JPG */
   background-position: right;
 }
 
@@ -33,6 +33,15 @@
   background-image: url(../images/about-me/1.JPG);
   background-position: left;
   position: relative;
+}
+@supports (background-image: url(../images/about-me/0.webp)) {
+  .about-detail__img {
+    background-image: url(../images/about-me/0.webp);
+  }
+
+  .about-quick__img {
+    background-image: url(../images/about-me/1.webp);
+  }
 }
 
 /* Decorative Dots for About Quick Image */
