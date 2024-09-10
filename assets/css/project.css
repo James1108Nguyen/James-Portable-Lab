@@ -1,16 +1,22 @@
+/* Section Project */
 #project {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary); /* Màu nền chính của section */
 }
+
 #project p {
   display: inline;
 }
 
 .row.project__card {
-  padding: 32px 0;
+  padding: 32px 0; /* Khoảng cách giữa các thẻ card trong project */
 }
+
+/* Phần chi tiết project */
 .project-card__detail {
-  border-radius: 25px 0px 0px 25px;
-  background-color: var(--color-background-light-2);
+  border-radius: 25px 0px 0px 25px; /* Bo góc bên trái của thẻ chi tiết project */
+  background-color: var(
+    --color-background-light-2
+  ); /* Màu nền nhẹ cho card project */
   height: 100%;
   padding-left: 15px;
   display: flex;
@@ -18,15 +24,15 @@
   justify-content: start;
   align-content: center;
 }
+
 .project-card__img-slider {
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 0px 25px 25px 0px; /* Bo góc bên phải của phần ảnh slider */
 }
+
 .project-card__detail > div {
-  flex-basis: 100%;
+  flex-basis: 100%; /* Đảm bảo các phần tử con chiếm 100% chiều ngang */
 }
-.row.project__card + .row.project__card {
-  /* border-top: 3px dashed #dfd7cc; */
-}
+
 .project__card-title {
   font-size: 4rem;
   text-align: center;
@@ -34,26 +40,32 @@
   padding: 40px 0 35px 0;
   text-transform: uppercase;
 }
+
 .project-card__name-detail {
-  font-size: 2.4rem;
+  font-size: 2.4rem; /* Tên project lớn và rõ ràng */
   line-height: normal;
   padding-top: 20px;
 }
+
 .project-card__detail > div + div {
   margin-top: 15px;
 }
+
+/* Kích thước văn bản trong các phần mô tả */
 .project__card-description,
-.project__card-techlonogy {
+.project__card-techlonogy,
+.project__card-link-container p {
   font-size: 1.5rem;
 }
 
 /* =================================== */
-/* Tag */
+/* Tag công nghệ trong project */
 .tech-tag-container {
   display: flex;
   margin: 10px 0;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Cho phép các thẻ công nghệ xuống dòng khi cần */
 }
+
 .tech-tag {
   height: 2rem;
   display: flex;
@@ -86,7 +98,7 @@
   padding: 0.3rem 0.4rem;
 }
 
-/* HTML */
+/* Các thẻ công nghệ HTML, CSS, JavaScript */
 .tag--html .tag__icon {
   background-image: url(../images/html-css-svgrepo.svg);
 }
@@ -94,39 +106,42 @@
 .tech-tag.tag--html .tag__name {
   color: #e04b24;
 }
-/* css */
+
 .tag--css .tag__icon {
   background-image: url(../images/css3-logo-svgrepo-com.svg);
 }
+
 .tech-tag.tag--css .tag__name {
   color: #0d72b8;
 }
-/* Js */
+
 .tag--javascript .tag__icon {
   background-image: url(../images/js-svgrepo-com.svg);
 }
+
 .tech-tag.tag--javascript .tag__name {
   color: #3d3e3e;
 }
-/* ReactJS */
-.tag--reactjs .tag__icon {
-  background-image: url(../images/react-svgrepo-com.svg);
-}
-.tech-tag.tag--reactjs .tag__name {
-  color: #52c1df;
-}
 
-/* NodeJs */
-.tag--nodejs .tag__icon {
-  background-image: url(../images/nodejs-svgrepo-com.svg);
+/* Liên kết GitHub và Deploy */
+.project__card-github,
+.project__card-link {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  margin-left: 5px;
 }
 
-.tech-tag.tag--nodejs .tag__name {
-  color: #4a903d;
+#project a:visited {
+  color: inherit; /* Bỏ màu tím khi đã truy cập */
 }
 
-/* Image Slider */
+.project__card-description {
+  line-height: 1.3; /* Điều chỉnh line-height cho phần mô tả */
+}
 
+/* =================================== */
+/* Slider cho hình ảnh trong project */
 .slider-container {
   position: relative;
   max-width: 100%;
@@ -138,19 +153,20 @@
   background-color: #f7f6f2;
   border-radius: 0px 15px 15px 0px;
 }
+
 .slider,
 .slide,
 .slide img {
   height: 100%;
 }
+
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  position: relative; /* Đặt relative để các slide con có thể dùng absolute */
-  position: absolute; /* Đảm bảo các slide nằm chồng lên nhau */
+  position: absolute; /* Các slide chồng lên nhau */
   top: 0;
   left: 0;
   min-width: 100%;
@@ -166,7 +182,6 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease-in-out, visibility 0s;
-  /* order: -1; Là một cách hay*/
 }
 
 .slide img {
@@ -174,6 +189,7 @@
   height: 80%;
   object-fit: contain;
 }
+
 .dots {
   text-align: center;
   position: relative;
@@ -190,10 +206,12 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
 .dot:hover {
   background-color: #717171;
   opacity: 100%;
 }
+
 .dot.active {
   background-color: #717171;
 }

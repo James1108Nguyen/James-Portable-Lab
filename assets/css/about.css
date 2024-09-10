@@ -1,57 +1,55 @@
+/* About Section */
 #about {
   background-color: var(--color-secondary);
 }
+
 #about .primary-heading {
   padding-top: 0;
 }
-.about-detail {
-}
+
+/* About Detail and Quick Section */
+.about-detail,
 .about-quick {
   margin-top: 30px;
 }
+
+/* About Detail Image */
 .about-detail__img,
 .about-quick__img {
   height: 400px;
-  background-size: cover; /* Để hình ảnh phủ kín thẻ div */
-  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 5px;
 }
+
 .about-detail__img {
   animation: fadeInLeft 2.5s linear;
   background-image: url(../images/about-me/0.jpg);
+  background-position: right;
 }
+
 .about-quick__img {
   animation: fadeInRight 2.5s linear;
   background-image: url(../images/about-me/1.JPG);
-}
-
-.about-detail__img {
-  background-position: right;
-}
-.about-quick__img {
   background-position: left;
   position: relative;
-  /* z-index: 1; Đặt lớp chấm chấm dưới ảnh */
 }
 
+/* Decorative Dots for About Quick Image */
 .about-quick__img::after {
   content: "";
   position: absolute;
-  top: 20px; /* Điều chỉnh vị trí của chấm chấm */
-  left: -30px; /* Điều chỉnh vị trí của chấm chấm */
-  width: 150px; /* Kích thước của vùng chứa chấm chấm */
-  height: 150px; /* Kích thước của vùng chứa chấm chấm */
-  /* z-index: -1; Đặt lớp chấm chấm dưới ảnh */
-  opacity: 0.8; /* Điều chỉnh độ mờ nếu cần */
+  top: 20px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  opacity: 0.8;
 }
 
+/* About Detail and Quick Content */
 .about-detail__content,
 .about-quick__content {
   font-size: 1.6rem;
   line-height: 1.4;
   color: var(--color-primary);
-}
-.about-detail__content {
-}
-.about-quick__content {
 }

@@ -1,25 +1,22 @@
-.home {
-  align-items: start;
-}
-
+/* Home Section */
 #home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../images/me-cafe.JPG);
   background-position: top;
   background-size: cover;
   height: 100vh;
-  transition: height 0.00001s ease; /* Chuyển đổi mượt mà khi thay đổi chiều cao */
+  transition: height 0.00001s ease;
 }
+
 #home .grid.wide {
-  opacity: 1; /* Độ mờ ban đầu là 1 (hoàn toàn rõ ràng) */
+  opacity: 1;
+  height: 100%;
+  display: flex;
 }
+
 .home {
   display: flex;
   align-items: center;
-}
-#home .grid.wide {
-  height: 100%;
-  display: flex;
 }
 
 .home__item {
@@ -31,15 +28,17 @@
   line-height: normal;
   color: var(--color-secondary);
 }
+
 .home__image {
   background-image: url(../images/isometric-laptop-with-web-design-application.gif);
   height: 550px;
-  background-size: cover; /* Để hình ảnh phủ kín thẻ div */
-  background-position: center; /* Căn giữa hình ảnh trong thẻ div */
-  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   animation: fadeInLeft 3.5s linear;
 }
 
+/* Home Info Animations */
 .home__info > .row > .col + .col {
   margin-top: 10px;
 }
@@ -60,33 +59,38 @@
   margin-left: -6px;
   animation-duration: 0.5s;
 }
+
 .info__name {
   display: flex;
   align-items: baseline;
   animation-duration: 1s;
 }
+
 .info__name-small {
   font-size: 2.5rem;
 }
+
 .info__name-large {
   margin-left: 5px;
   color: #1f8bab;
-}
-.info__name-large,
-.info__job {
   font-size: 3.5rem;
 }
+
 .info__job {
+  font-size: 3.5rem;
   animation-duration: 1.5s;
 }
+
 .info__detail {
   font-size: 1.8rem;
   animation-duration: 2s;
   text-align: justify;
 }
+
 .info__detail > p {
   margin: 10px 0;
 }
+
 .info__contact {
   font-size: 1.4rem;
   padding: 5px 8px;
@@ -97,6 +101,7 @@
 .info__contact-icon {
   height: 1.4rem;
 }
+
 .info__contact-address,
 .info__contact-phone,
 .info__contact-email {
@@ -104,6 +109,8 @@
   margin-left: 5px;
   padding: 2px 0;
 }
+
+/* Buttons */
 .info__item-btn {
   display: inline-block;
   animation-duration: 2.8s;
