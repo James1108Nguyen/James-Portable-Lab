@@ -2,13 +2,14 @@
 @import url(common-clasese.css);
 @import url(animations.css);
 @import url(grid.css);
+@import url(sidebar.css);
 @import url(header.css);
 @import url(home.css);
 @import url(about.css);
 @import url(skills.css);
 @import url(project.css);
+@import url(contact.css);
 @import url(footer.css);
-@import url(sidebar.css);
 @import url(responsive.css);
 
 * {
@@ -19,7 +20,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
   /* default line height  */
-  line-height: 1.6rem;
+  /* line-height: 1.6rem; */
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height));
@@ -29,7 +30,8 @@ html {
 #about,
 #skill,
 #project,
-#resume {
+#resume,
+#contact {
   padding: calc(var(--header-height)) 0;
 }
 #home {

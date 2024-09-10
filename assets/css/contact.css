@@ -1,0 +1,122 @@
+.contact__container {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+/* Contact Form Block */
+.contact-form {
+  background-color: #ffffff;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+}
+
+.contact-form__title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+}
+
+.contact-form__group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-form__field {
+  width: 100%;
+}
+
+.contact-form__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: 15px 2px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 1s ease;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border: none;
+  border-bottom: 4px solid var(--color-secondary);
+  outline: none;
+}
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: #999;
+}
+
+.contact-form__button {
+  display: inline-block;
+  /* background-color: var(--color-highlight-light); */
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 12px 40px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact-form__button i {
+  margin-left: 6px;
+}
+
+.contact-form__button:hover {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+/* Contact Info Block */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  /* background: linear-gradient(135deg, #4b4e52, #292b2f); */
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 30px;
+  height: 100%;
+}
+.contact-info__logo,
+.contact-info__p,
+.contact-info__title,
+.contact-info__address,
+.contact-info__phone,
+.contact-info__email {
+  margin: 5px 0;
+  flex-basis: 100%;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.contact-info__logo {
+  font-size: 15rem;
+  justify-content: center;
+}
+.contact-info i {
+  padding: 0 8px;
+}
+.contact-info__p {
+  font-size: 1.6rem;
+}
+
+.contact-info__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}

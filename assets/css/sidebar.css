@@ -49,7 +49,7 @@
 .sidebar__local {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   list-style: none;
@@ -61,10 +61,11 @@
   align-items: flex-start;
 }
 
+.sidebar__close-btn,
 .sidebar-local__location,
 .sidebar-local__time,
 .sidebar-local__weather-temp {
-  color: #fff;
+  color: var(--color-secondary);
 }
 
 .sidebar-local__location {

@@ -248,3 +248,36 @@ function closeSidebar() {
   sidebar.classList.remove("open");
   overlay.classList.remove("show");
 }
+
+// ===========================
+// Contact Functions
+// ===========================
+
+document
+  .querySelector(".contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Ngăn việc submit mặc định (chuyển trang)
+
+    // Lấy dữ liệu từ form
+    const formData = new FormData(this);
+
+    // Gửi dữ liệu bằng fetch API (AJAX)
+    fetch("https://formspree.io/f/xxx", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Your message has been sent!");
+        } else {
+          alert("There was an issue with your submission.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("There was an error submitting the form.");
+      });
+  });
