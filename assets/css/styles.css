@@ -39,7 +39,8 @@ html {
 #about {
   background-color: var(--color-background-light);
 }
-#skill {
+#skill,
+#resume {
   background-color: var(--color-background-light-2);
 }
 #project {

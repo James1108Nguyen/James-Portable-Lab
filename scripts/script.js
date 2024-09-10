@@ -30,7 +30,6 @@ window.addEventListener("scroll", function () {
       maxHeight - (scrollPosition / scrollThreshold) * (maxHeight - minHeight);
     homeSection.style.height = `${newHeight}px`;
   }
-  //================================================================
   const homeContent = document.querySelector("#home .home__info");
   const header = document.getElementById("header");
   const triggerPoint = 20;
@@ -46,6 +45,23 @@ window.addEventListener("scroll", function () {
   // Điều chỉnh opacity cho nội dung home
   const opacityValue = Math.max(1 - scrollPosition / (maxHeight * 0.38), 0); // Giảm opacity nhanh hơn
   homeContent.style.opacity = opacityValue;
+  //================================================================
+  // Xử lý khi người dùng cuộn trang
+  window.addEventListener("scroll", function () {
+    let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll(
+      ".nav-list__item a, .sidebar__nav a"
+    );
+
+    sections.forEach((section, index) => {
+      let rect = section.getBoundingClientRect();
+      if (rect.top <= 150 && rect.bottom >= 150) {
+        // Kiểm tra nếu section ở giữa màn hình
+        navLinks.forEach((link) => link.classList.remove("active")); // Xóa tất cả class active
+        navLinks[index].classList.add("active"); // Thêm class active vào mục menu tương ứng
+      }
+    });
+  });
 });
 
 //================================================================================================================================
