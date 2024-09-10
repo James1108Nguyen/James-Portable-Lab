@@ -19,3 +19,24 @@
 .text-center {
   text-align: center !important;
 }
+
+.primary-heading,
+.secondary-heading {
+  line-height: 1.1;
+  color: var(--color-highlight);
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.primary-heading {
+  font-size: 3rem;
+  padding: 20px 0;
+}
+.secondary-heading {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+.quote-content {
+  border-left: #333 4px solid;
+  padding-left: 20px;
+}

@@ -25,25 +25,6 @@ html {
   scroll-padding-top: calc(var(--header-height));
 }
 
-.primary-heading,
-.secondary-heading {
-  line-height: 1.1;
-  color: var(--color-highlight);
-  font-weight: 600;
-}
-
-.primary-heading {
-  font-size: 3rem;
-  padding: 20px 0;
-}
-.secondary-heading {
-  font-size: 2rem;
-  padding: 10px 0;
-}
-.quote-content {
-  border-left: #333 4px solid;
-  padding-left: 20px;
-}
 #home,
 #about,
 #skill,
