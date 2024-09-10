@@ -15,6 +15,10 @@
   #openSidebarBtn {
     display: flex;
   }
+  .about-detail__img,
+  .about-quick__img {
+    margin: 18px 0;
+  }
   .footer__container {
     flex-wrap: wrap-reverse;
   }
@@ -38,10 +42,6 @@
 
 /* Mobile */
 @media (max-width: 740px) {
-  .about-detail__img,
-  .about-quick__img {
-    margin: 10px 0;
-  }
   .about-quick {
     flex-direction: row-reverse;
   }
