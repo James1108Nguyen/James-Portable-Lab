@@ -227,7 +227,7 @@ function autoSlide(sliderId) {
   // Tự động chuyển slide mỗi 3 giây
   slider.autoSlideInterval = setInterval(function () {
     showSlides(sliderId, slider.currentSlideIndex + 1);
-  }, 1500);
+  }, 2200);
 }
 
 // Hiển thị slide hiện tại và dừng tự động chuyển khi người dùng tương tác
@@ -239,6 +239,7 @@ function currentSlide(sliderId, n) {
 
 // Khởi tạo slider cho các project khác nhau
 autoSlide("slider-project-1");
+autoSlide("slider-project-2");
 
 const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 document.documentElement.style.setProperty(

@@ -170,9 +170,9 @@
 }
 
 .slide img {
-  width: 80%;
-  height: auto;
-  object-fit: cover;
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
 }
 .dots {
   text-align: center;
