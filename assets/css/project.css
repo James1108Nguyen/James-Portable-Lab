@@ -15,7 +15,7 @@
 .project-card__detail {
   border-radius: 25px 0px 0px 25px; /* Bo góc bên trái của thẻ chi tiết project */
   background-color: var(
-    --color-background-light-2
+    --color-background-light-3
   ); /* Màu nền nhẹ cho card project */
   height: 100%;
   padding-left: 15px;
@@ -151,7 +151,7 @@
   height: 400px; /* Chiều cao cố định */
   min-height: 300px; /* Chiều cao tối thiểu */
   max-height: 600px; /* Chiều cao tối đa */
-  background-color: #f7f6f2;
+  background-color: #f8f4ef;
   border-radius: 0px 15px 15px 0px;
 }
 

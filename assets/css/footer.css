@@ -3,12 +3,13 @@
   line-height: normal;
   padding: 75px 0;
   position: relative;
+  color: var(--color-secondary);
 }
 
 .footer a:visited,
 .footer a {
   text-decoration: none;
-  color: #333;
+  color: inherit;
 }
 
 .footer__copyright,
@@ -24,11 +25,13 @@
 .footer__copyright-img {
   width: 100%;
   margin: 15px 0;
+  filter: invert(86%) sepia(21%) saturate(328%) hue-rotate(347deg)
+    brightness(90%) contrast(89%);
 }
 .footer__copyright-text {
   font-size: 1.4rem;
-  color: #535353;
   margin: 5px 0;
+  filter: brightness(80%);
 }
 
 .footer__contact {
@@ -74,8 +77,8 @@
   height: 50px;
   border-radius: 50px;
   position: absolute;
-  bottom: 40px;
-  right: 20px;
+  bottom: 80px;
+  right: 40px;
   background-color: #33333367;
   /* căn giữa */
   display: flex;

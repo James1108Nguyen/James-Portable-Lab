@@ -72,7 +72,7 @@
 
 .info__name-large {
   margin-left: 5px;
-  color: #1f8bab;
+  color: var(--color-highlight-light);
   font-size: 3.5rem;
 }
 
@@ -85,16 +85,18 @@
   font-size: 1.8rem;
   animation-duration: 2s;
   text-align: justify;
+  line-height: 1.4;
+  margin: 5px 0;
 }
 
-.info__detail > p {
-  margin: 10px 0;
+.color-yellow {
+  color: #d5a821;
 }
 
 .info__contact {
   font-size: 1.4rem;
   padding: 5px 8px;
-  border-left: 3px solid #ffffff;
+  border-left: 3px solid #d1a27e75;
   animation-duration: 2.5s;
 }
 
@@ -129,6 +131,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1.2px;
+  text-decoration: none;
 }
 
 .btn--black {

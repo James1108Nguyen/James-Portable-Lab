@@ -23,9 +23,9 @@
 .primary-heading,
 .secondary-heading {
   line-height: 1.1;
-  color: var(--color-highlight);
+  color: var(--color-highlight-dark);
   font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(240, 240, 240, 0.5);
 }
 
 .primary-heading {
@@ -37,6 +37,6 @@
   padding: 10px 0;
 }
 .quote-content {
-  border-left: #333 4px solid;
+  border-left: var(--color-primary) 4px solid;
   padding-left: 20px;
 }
