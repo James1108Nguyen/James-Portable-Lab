@@ -9,6 +9,7 @@ root.style.setProperty(
   "--header-expanded-height",
   baseHeaderHeight + 10 + "px"
 );
+const vh = window.innerHeight;
 
 const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 root.style.setProperty("--scrollbar-width", `${scrollbarWidth}px`);
@@ -282,3 +283,40 @@ document
         alert("There was an error submitting the form.");
       });
   });
+
+// ===========================
+// All section animation functions
+// ===========================
+
+// Function to detect when element is within the specified distance from viewport
+function isInViewportWithBuffer(element, buffer = 100) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 - buffer &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) + buffer &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to add or remove 'in-view' class based on position in viewport
+function checkSectionsInView() {
+  const sections = document.querySelectorAll("section:not(#home)");
+  sections.forEach((section) => {
+    if (isInViewportWithBuffer(section, 0.7 * vh)) {
+      // Thêm buffer nếu cần
+      section.classList.add("in-view"); // Thêm hiệu ứng
+    } else {
+      section.classList.remove("in-view"); // Xóa class để tái sử dụng hiệu ứng
+    }
+  });
+}
+
+// Check sections when the page loads and when the user scrolls
+window.addEventListener("scroll", checkSectionsInView);
+window.addEventListener("load", checkSectionsInView);
+window.addEventListener("DOMContentLoaded", checkSectionsInView);
+
+// Initial check on page load
+checkSectionsInView();
