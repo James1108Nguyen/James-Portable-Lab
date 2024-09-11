@@ -74,7 +74,7 @@
 }
 
 .sidebar-local__time {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -87,6 +87,9 @@
 .sidebar-local__weather-icon {
   margin-right: 10px;
   height: 15px;
+}
+.sidebar-local__weather-temp {
+  font-size: 1.4rem;
 }
 
 /* Sidebar Navigation */

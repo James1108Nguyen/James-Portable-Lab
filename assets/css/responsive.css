@@ -38,6 +38,14 @@
   .project-card__img-slider {
     border-radius: 0 0 25px 25px;
   }
+
+  .footer__scroll-to-home {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    top: 30px;
+    right: 15px;
+  }
 }
 
 /* Mobile */
@@ -71,6 +79,13 @@
     top: -24px;
     background-color: rgb(61, 61, 61);
   }
+  .footer__scroll-to-home {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 30px;
+    right: 15px;
+  }
 }
 
 /* Tablet */
@@ -95,6 +110,13 @@
 
   .footer__copyright {
     padding-bottom: 40px;
+  }
+  .footer__scroll-to-home {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    top: 50px;
+    right: 25px;
   }
 }
 
