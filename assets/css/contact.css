@@ -3,6 +3,11 @@
   border-radius: 20px;
 }
 
+.primary-heading .sub-text {
+  font-size: 1.6rem;
+  color: #666;
+}
+
 /* Contact Form Block */
 .contact-form {
   background-color: #ffffff;
@@ -61,6 +66,11 @@
   color: #999;
 }
 
+.contact-form__textarea {
+  border-radius: 8px 8px 2px 2px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.04);
+}
+
 .contact-form__button {
   display: inline-block;
   /* background-color: var(--color-highlight-light); */
@@ -86,6 +96,7 @@
 .contact-info {
   display: flex;
   flex-wrap: wrap;
+  align-items: space-evenly;
   /* background: linear-gradient(135deg, #4b4e52, #292b2f); */
   background-color: var(--color-primary);
   color: var(--color-secondary);
@@ -99,14 +110,15 @@
 .contact-info__phone,
 .contact-info__email {
   margin: 5px 0;
-  flex-basis: 100%;
+  min-width: 100%;
   display: flex;
   font-size: 1.4rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .contact-info__logo {
   font-size: 15rem;
-  justify-content: center;
 }
 .contact-info i {
   padding: 0 8px;

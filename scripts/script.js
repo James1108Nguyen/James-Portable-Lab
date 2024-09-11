@@ -260,9 +260,10 @@ document
 
     // Lấy dữ liệu từ form
     const formData = new FormData(this);
+    console.log(formData);
 
     // Gửi dữ liệu bằng fetch API (AJAX)
-    fetch("https://formspree.io/f/xxx", {
+    fetch("https://formspree.io/f/mnnarezw", {
       method: "POST",
       body: formData,
       headers: {
