@@ -14,6 +14,7 @@
   }
   #openSidebarBtn {
     display: flex;
+    font-size: 3rem;
   }
   .about-detail__img,
   .about-quick__img {
