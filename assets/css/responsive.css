@@ -28,7 +28,6 @@
 @media (max-width: 739px) {
   :root {
     --header-height: 40px;
-    --logo-height: 30px;
   }
 
   .project-card__detail {

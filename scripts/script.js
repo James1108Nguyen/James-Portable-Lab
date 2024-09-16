@@ -289,14 +289,17 @@ document
 // ===========================
 
 // Function to detect when element is within the specified distance from viewport
-function isInViewportWithBuffer(element, buffer = 100) {
+function isPartiallyInViewport(element, buffer = 100) {
   const rect = element.getBoundingClientRect();
+  const windowHeight =
+    window.innerHeight || document.documentElement.clientHeight;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
   return (
-    rect.top >= 0 - buffer &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) + buffer &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top < windowHeight + buffer && // Cho phép phần tử cách viewport 1 khoảng buffer
+    rect.bottom > -buffer && // Kiểm tra phần dưới cách viewport bao nhiêu
+    rect.left < windowWidth + buffer &&
+    rect.right > -buffer
   );
 }
 
@@ -304,11 +307,11 @@ function isInViewportWithBuffer(element, buffer = 100) {
 function checkSectionsInView() {
   const sections = document.querySelectorAll("section:not(#home)");
   sections.forEach((section) => {
-    if (isInViewportWithBuffer(section, 0.7 * vh)) {
-      // Thêm buffer nếu cần
+    if (isPartiallyInViewport(section, 0.1 * vh)) {
+      console.log(section.id + " was in viewport: " + 0.1 * vh + "px");
       section.classList.add("in-view"); // Thêm hiệu ứng
     } else {
-      section.classList.remove("in-view"); // Xóa class để tái sử dụng hiệu ứng
+      section.classList.remove("in-view");
     }
   });
 }

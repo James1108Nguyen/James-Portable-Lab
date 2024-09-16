@@ -159,7 +159,7 @@
   position: absolute;
   display: none;
   align-items: center;
-  font-size: calc(var(--logo-height) / 2);
+  font-size: calc(var(--header-height) * 0.6);
   color: #fff;
   right: 0;
   height: 100%;
